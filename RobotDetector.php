@@ -88,6 +88,10 @@ class RobotDetector {
 			} elseif(strpos($lower, "alexa") !== false) {
 				return new Bots\Alexa($useragent);
 			//--------------------------------------------------------------------------
+			//WordPress
+			} elseif(strpos($lower, "wordpress") !== false) {
+				return new Bots\WordPress($useragent);
+			//--------------------------------------------------------------------------
 			//Generic Bot
 			//Try to make a huge difference between a real visitor and a bot
 			} elseif(
