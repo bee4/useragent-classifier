@@ -11,11 +11,10 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
 use BeeBot\Exception\NotAKnownBotException;
+use InvalidArgumentException;
 
 /**
- * Class Yandex
  * Detect if a visit is a yandex one
  * @package BeeBot\Tools\Robot\Bots
  */
@@ -24,14 +23,12 @@ class Yandex extends AbstractBot
 	/**
 	 * Yandex bot constructor
 	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
 	 * @throws NotAKnownBotException
 	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//YandexBot (search bot): http://www.botopedia.org/user-agent-list/search-bots/yandex-bot.html
 		//List of UA: http://user-agent-string.info/list-of-ua/bot-detail?bot=YandexBot
 		//Yandex Bot reference: http://help.yandex.com/search/robots/user-agent.xml
@@ -51,11 +48,12 @@ class Yandex extends AbstractBot
 
 		if (preg_match('/^Mozilla\/5\.0 \(compatible; Yandex([A-Za-z]+)\/.*$/', $useragent, $matches)) {
 			$this->setName('yandex-'.strtolower($matches[1]));
-		} elseif (strpos($useragent, 'Yandex.Translate') !== false)
+		} elseif (strpos($useragent, 'Yandex.Translate') !== false) {
 			$this->setName('yandex-translate');
-		elseif ( strpos($useragent, 'Yandex Browser') !== false || strpos($useragent, 'Edition Yandex') !== false )
+		} elseif ( strpos($useragent, 'Yandex Browser') !== false || strpos($useragent, 'Edition Yandex') !== false ) {
 			throw new NotAKnownBotException($useragent);
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Yandex one: ' . $useragent);
+		}
 	}
 }

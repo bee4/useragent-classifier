@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class Seznam
@@ -22,19 +22,19 @@ class Seznam extends AbstractBot
 {
 	/**
 	 * Seznam bot constructor
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//Seznam bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/seznam-bot.html
 		/**
 		SeznamBot/3.0 (+http://fulltext.sblog.cz/)
 		 */
-		if (strpos($useragent, 'SeznamBot') !== false)
+		if (strpos($useragent, 'SeznamBot') !== false) {
 			$this->setName('seznam-bot');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Seznam one: ' . $useragent);
+		}
 	}
 }

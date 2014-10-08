@@ -28,8 +28,6 @@ class WordPress extends AbstractBot
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		/**
 		WordPress/X.X.X
 		 */

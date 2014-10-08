@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class DiscoBot
@@ -23,22 +23,22 @@ class DiscoBot extends AbstractBot
 	/**
 	 * DiscoBot bot constructor
 	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//DiscoBot bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/discobot.html
 		/**
 		Mozilla/5.0 (compatible; discobot-news; +http://discoveryengine.com/discobot.html)
 		Mozilla/5.0 (compatible; discobot/2.0; +http://discoveryengine.com/discobot.html)
 		 */
-		if (strpos($useragent, 'discobot-news') !== false)
+		if (strpos($useragent, 'discobot-news') !== false) {
 			$this->setName('discobot-news');
-		elseif (strpos($useragent, 'discobot') !== false)
+		} elseif (strpos($useragent, 'discobot') !== false) {
 			$this->setName('discobot-bot');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid DiscoBot one: ' . $useragent);
+		}
 	}
 }

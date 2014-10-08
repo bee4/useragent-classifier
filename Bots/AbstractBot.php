@@ -27,12 +27,6 @@ abstract class AbstractBot implements \JsonSerializable
 	private $name;
 
 	/**
-	 * AbstractBot constructor
-	 */
-	public function __construct()
-	{}
-
-	/**
 	 * Set the name of current bot
 	 * This name is a precise one (googlebot-image or googlebot)
 	 *

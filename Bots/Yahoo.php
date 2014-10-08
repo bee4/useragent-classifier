@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class Yahoo
@@ -22,13 +22,11 @@ class Yahoo extends AbstractBot
 {
 	/**
 	 * Yahoo bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//Yahoo Slurp (search bot): http://www.botopedia.org/user-agent-list/search-bots/yahoo-slurp.html
 		//Yahoo Pipes (feed fetcher): http://www.botopedia.org/user-agent-list/feed-fetchers/item/342.html
 		//Yahoo messenger: http://developer.yahoo.com/messenger/guide/ch02.html
@@ -54,23 +52,24 @@ class Yahoo extends AbstractBot
 		YahooMessenger/1.0 ( < Application Name>; <Application Version> )
 		YahooMobileMessenger/1.0 (xyz-mobile messenger; 1.0.0.0) (1234; Apple; iPhone; iPhone OS/3.0)
 		*/
-		if (strpos($useragent, 'Yahoo!-AdCrawler') !== false)
+		if (strpos($useragent, 'Yahoo!-AdCrawler') !== false) {
 			$this->setName('yahoo-ads');
-		elseif (strpos($useragent, 'YahooYSMcm') !== false)
+		} elseif (strpos($useragent, 'YahooYSMcm') !== false) {
 			$this->setName('yahoo-search-marketing');
-		elseif (strpos($useragent, 'Yahoo! Slurp') !== false)
+		} elseif (strpos($useragent, 'Yahoo! Slurp') !== false) {
 			$this->setName('yahoo-slurp');
-		elseif (strpos($useragent, 'Yahoo Pipes') !== false)
+		} elseif (strpos($useragent, 'Yahoo Pipes') !== false) {
 			$this->setName('yahoo-pipes');
-		elseif (strpos($useragent, 'Y!J') !== false || $useragent == 'Mozilla/4.0 (compatible; Yahoo Japan; for robot study; kasugiya)')
+		} elseif (strpos($useragent, 'Y!J') !== false || $useragent == 'Mozilla/4.0 (compatible; Yahoo Japan; for robot study; kasugiya)') {
 			$this->setName('yahoo-japan');
-		elseif ( $useragent == 'YahooCacheSystem' || $useragent == 'YahooExternalCache' )
+		} elseif ( $useragent == 'YahooCacheSystem' || $useragent == 'YahooExternalCache' ) {
 			$this->setName('yahoo-cache');
-		elseif ( substr($useragent, 0, 14) == 'YahooMessenger' || substr($useragent, 0, 20) == 'YahooMobileMessenger' )
+		} elseif ( substr($useragent, 0, 14) == 'YahooMessenger' || substr($useragent, 0, 20) == 'YahooMobileMessenger' ) {
 			$this->setName('yahoo-messenger');
-		elseif ( $useragent == 'Yahoo:LinkExpander:Slingstone' )
+		} elseif ( $useragent == 'Yahoo:LinkExpander:Slingstone' ) {
 			$this->setName('yahoo-tools');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Yahoo one: ' . $useragent);
+		}
 	}
 }

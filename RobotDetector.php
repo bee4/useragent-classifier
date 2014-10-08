@@ -12,6 +12,7 @@
 namespace BeeBot\Tools\Robot;
 
 use BeeBot\Exception\NotAKnownBotException;
+use InvalidArgumentException;
 
 /**
  * Class RobotDetector
@@ -107,7 +108,7 @@ class RobotDetector {
                     return new Bots\Visitor($useragent);
                 }
                 //--------------------------------------------------------------------------
-            } catch( \InvalidArgumentException $oError ) {
+            } catch( InvalidArgumentException $oError ) {
                 //@todo Change LoggerFactory to eventdispatcher log event
                 //LoggerFactory::get()->log($oError->getMessage(). " Unknown user agent processed as \"BaseBot\"!", LoggerInterface::WARNING);
                 return new Bots\BaseBot($useragent);

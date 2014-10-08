@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class ExaBot
@@ -22,23 +22,22 @@ class ExaBot extends AbstractBot
 {
 	/**
 	 * ExaBot bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//ExaBot (crawler): http://www.botopedia.org/user-agent-list/crawlers/item/336.html
 		/**
 		Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)
 		Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)
 		 */
-		if (strpos($useragent, 'Exabot-Thumbnails') !== false)
+		if (strpos($useragent, 'Exabot-Thumbnails') !== false) {
 			$this->setName('exabot-image');
-		elseif (strpos($useragent, 'Exabot') !== false)
+		} elseif (strpos($useragent, 'Exabot') !== false) {
 			$this->setName('exabot-bot');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Exabot one: ' . $useragent);
+		}
 	}
 }

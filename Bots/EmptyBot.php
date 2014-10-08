@@ -11,8 +11,6 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
-
 /**
  * Define an EmptyBot used when no bot is returned
  * @package BeeBot\Tools\Robot\Bots
@@ -21,12 +19,9 @@ class EmptyBot extends AbstractBot
 {
 	/**
 	 * EmptyBot bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
 	 */
 	public function __construct()
 	{
-		parent::__construct();
 		$this->setName('');
 	}
 }

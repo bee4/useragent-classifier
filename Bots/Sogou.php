@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class Sogou
@@ -22,13 +22,11 @@ class Sogou extends AbstractBot
 {
 	/**
 	 * Soso bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//Sogou spider (search bot): http://www.botopedia.org/user-agent-list/search-bots/sogou-spider.html
 		/**
 		Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)
@@ -37,13 +35,14 @@ class Sogou extends AbstractBot
 		New-Sogou-Spider/1.0 (compatible; MSIE 5.5; Windows 98)
 		Sogou inst spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07"
 		 */
-		if (strpos($useragent, 'Sogou Pic') !== false)
+		if (strpos($useragent, 'Sogou Pic') !== false) {
 			$this->setName('sogou-image');
-		elseif (strpos($useragent, 'Sogou inst') !== false)
+		} elseif (strpos($useragent, 'Sogou inst') !== false) {
 			$this->setName('sogou-instant');
-		elseif (strpos(strtolower($useragent), 'sogou') !== false)
+		} elseif (strpos(strtolower($useragent), 'sogou') !== false) {
 			$this->setName('sogou-spider');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Sogou one: ' . $useragent);
+		}
 	}
 }

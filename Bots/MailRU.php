@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class MailRU
@@ -22,20 +22,19 @@ class MailRU extends AbstractBot
 {
 	/**
 	 * MailRU bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//Mail.RU bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/mailru-bot.html
 		/**
 		Mozilla/5.0 (compatible; Mail.RU/2.0)
 		 */
-		if (strpos($useragent, 'Mail.RU') !== false)
+		if (strpos($useragent, 'Mail.RU') !== false) {
 			$this->setName('mailru-bot');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Mail.RU one: ' . $useragent);
+		}
 	}
 }

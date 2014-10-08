@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class Bing
@@ -22,13 +22,11 @@ class Bing extends AbstractBot
 {
 	/**
 	 * Bing bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//BingBot (search bot): http://www.botopedia.org/user-agent-list/search-bots/bingbot.html
 		//AdidxBot (crawler): http://www.botopedia.org/user-agent-list/crawlers/item/343.html, http://user-agent-string.info/list-of-ua/bot-detail?bot=adidxbot
 		/**
@@ -41,15 +39,16 @@ class Bing extends AbstractBot
 		adidxbot/1.1 (+http://search.msn.com/msnbot.htm)
 		adidxbot/2.0 (+http://search.msn.com/msnbot.htm)
 		 */
-		if (strpos($useragent, 'msnbot-media') !== false)
+		if (strpos($useragent, 'msnbot-media') !== false) {
 			$this->setName('bing-msn-media');
-		elseif (strpos($useragent, 'adidxbot') !== false)
+		} elseif (strpos($useragent, 'adidxbot') !== false) {
 			$this->setName('bing-adcenter');
-		elseif (strpos($useragent, 'msnbot') !== false)
+		} elseif (strpos($useragent, 'msnbot') !== false) {
 			$this->setName('bing-msn');
-		elseif (strpos(strtolower($useragent), 'bing') !== false)
+		} elseif (strpos(strtolower($useragent), 'bing') !== false) {
 			$this->setName('bing-bot');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Bing one: ' . $useragent);
+		}
 	}
 }

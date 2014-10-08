@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class GoogleBot
@@ -22,13 +22,11 @@ class Google extends AbstractBot
 {
 	/**
 	 * Google bot constructor
-	 *
-	 * @param String $useragent The useragent used for detection
+	 * @param string $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		//GoogleBot (search bot): http://www.botopedia.org/user-agent-list/search-bots/googlebot.html
 		//Google FeedFetcher (search bot): http://www.botopedia.org/user-agent-list/search-bots/google-feedfetcher.html
 		//Google Custom Search (search bot): http://www.botopedia.org/user-agent-list/search-bots/google-custom-search.html
@@ -92,41 +90,42 @@ class Google extends AbstractBot
 		AppEngine-Google; (+http://code.google.com/appengine; appid: craigserver)
 		AppEngine-Google; ( http://code.google.com/appengine; appid: proxy-ba-k)
 		 */
-		if (strpos($useragent, 'Googlebot-Image') !== false)
+		if (strpos($useragent, 'Googlebot-Image') !== false) {
 			$this->setName('google-image');
-		elseif (strpos($useragent, 'Googlebot-Mobile') !== false)
+		} elseif (strpos($useragent, 'Googlebot-Mobile') !== false) {
 			$this->setName('google-mobile');
-		elseif (strpos($useragent, 'Googlebot-News') !== false)
+		} elseif (strpos($useragent, 'Googlebot-News') !== false) {
 			$this->setName('google-news');
-		elseif (strpos($useragent, 'Googlebot-Video') !== false)
+		} elseif (strpos($useragent, 'Googlebot-Video') !== false) {
 			$this->setName('google-video');
-		elseif (strpos($useragent, 'compatible; Mediapartners-Google') !== false)
+		} elseif (strpos($useragent, 'compatible; Mediapartners-Google') !== false) {
 			$this->setName('google-adsense-mobile');
-		elseif (strpos($useragent, 'Mediapartners-Google') !== false)
+		} elseif (strpos($useragent, 'Mediapartners-Google') !== false) {
 			$this->setName('google-adsense');
-		elseif (strpos($useragent, 'AdsBot-Google') !== false)
+		} elseif (strpos($useragent, 'AdsBot-Google') !== false) {
 			$this->setName('google-adsbot');
-		elseif (strpos($useragent, 'GoogleProducer') !== false)
+		} elseif (strpos($useragent, 'GoogleProducer') !== false) {
 			$this->setName('google-producer');
-		elseif (strpos($useragent, 'Google-Site-Verification') !== false)
+		} elseif (strpos($useragent, 'Google-Site-Verification') !== false) {
 			$this->setName('google-site-verification');
-		elseif (strpos($useragent, 'Google-Test') !== false || strpos($useragent, 'Googlebot-Test') !== false)
+		} elseif (strpos($useragent, 'Google-Test') !== false || strpos($useragent, 'Googlebot-Test') !== false) {
 			$this->setName('google-test');
-		elseif (strpos($useragent, 'Feedfetcher-Google') !== false)
+		} elseif (strpos($useragent, 'Feedfetcher-Google') !== false) {
 			$this->setName('google-feedfetcher');
-		elseif (strpos($useragent, 'Google Desktop') !== false)
+		} elseif (strpos($useragent, 'Google Desktop') !== false) {
 			$this->setName('google-desktop');
-		elseif (strpos($useragent, 'translate.google.com') !== false)
+		} elseif (strpos($useragent, 'translate.google.com') !== false) {
 			$this->setName('google-translate');
-		elseif (strpos($useragent, 'GoogleToolbar') !== false)
+		} elseif (strpos($useragent, 'GoogleToolbar') !== false) {
 			$this->setName('google-toolbar');
-		elseif (strpos($useragent, 'AppEngine-Google') !== false)
+		} elseif (strpos($useragent, 'AppEngine-Google') !== false) {
 			$this->setName('google-appengine');
-		elseif (strpos($useragent, 'Googlebot') !== false)
+		} elseif (strpos($useragent, 'Googlebot') !== false) {
 			$this->setName('google-bot');
-		elseif (strpos($useragent, 'Google') !== false)
+		} elseif (strpos($useragent, 'Google') !== false) {
 			$this->setName('google-unknown');
-		else
+		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid google one: ' . $useragent);
+		}
 	}
 }

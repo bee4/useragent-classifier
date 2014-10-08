@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * BeeBot bot :)
@@ -22,13 +22,11 @@ class BeeBot extends AbstractBot
 {
 	/**
 	 * Bee4 bot constructor
-	 *
 	 * @param String $useragent The useragent used for detection
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct($useragent)
 	{
-		parent::__construct();
-
 		/**
 		Bee4 - BeeBot/1.0
 		 */
