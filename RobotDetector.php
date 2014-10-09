@@ -100,7 +100,7 @@ class RobotDetector {
                     return new Bots\BaseBot($useragent);
                 //--------------------------------------------------------------------------
                 //Regular visitor (none of the above...)
-                } elseif($lower === "-") {
+                } elseif($lower === "-" || $lower === "") {
                     return new Bots\EmptyBot;
                 //--------------------------------------------------------------------------
                 //Regular visitor (none of the above...)
