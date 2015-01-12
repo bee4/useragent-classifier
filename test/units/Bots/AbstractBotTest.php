@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\AbstractBot;
+use Bee4\UserAgentClassify\Bots\AbstractBot;
 
 /**
  * Class AbstractBotTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class AbstractBotTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,7 +31,7 @@ class AbstractBotTest extends \PHPUnit_Framework_TestCase
 	protected function setUp()
 	{
 		$this->object = $this
-			->getMockBuilder('\BeeBot\Tools\Robot\Bots\AbstractBot')
+			->getMockBuilder('\Bee4\UserAgentClassify\Bots\AbstractBot')
 			->setMethods(null)
 	    ->setMockClassName('FakeBot')
 	    ->getMock();

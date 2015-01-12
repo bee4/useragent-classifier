@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\BaseBot;
+use Bee4\UserAgentClassify\Bots\BaseBot;
 
 /**
  * Class BaseBotTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class BaseBotTest extends \PHPUnit_Framework_TestCase
 {
@@ -25,7 +25,7 @@ class BaseBotTest extends \PHPUnit_Framework_TestCase
 	protected $object;
 
 	/**
-	 * @expectedException BeeBot\Tools\Robot\NotAKnownBotException
+	 * @expectedException Bee4\UserAgentClassify\NotAKnownBotException
 	 */
 	public function testInvalidBotUA()
 	{

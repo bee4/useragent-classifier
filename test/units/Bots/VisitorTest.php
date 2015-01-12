@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\Visitor;
+use Bee4\UserAgentClassify\Bots\Visitor;
 
 /**
  * Class VisitorTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class VisitorTest extends \PHPUnit_Framework_TestCase
 {

@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\Seznam;
+use Bee4\UserAgentClassify\Bots\Seznam;
 
 /**
  * Class SeznamTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class SeznamTest extends \PHPUnit_Framework_TestCase
 {

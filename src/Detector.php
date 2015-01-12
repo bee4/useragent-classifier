@@ -6,19 +6,19 @@
  *
  * @copyright Bee4 2013
  * @author	Stephane HULARD <s.hulard@chstudio.fr>
- * @package BeeBot\Tools\Robot
+ * @package Bee4\UserAgentClassify
  */
 
-namespace BeeBot\Tools\Robot;
+namespace Bee4\UserAgentClassify;
 
 use InvalidArgumentException;
 
 /**
  * Class RobotDetector
  * Define different methods to detect bots from logs
- * @package BeeBot\Tools\Robot
+ * @package Bee4\UserAgentClassify
  */
-class RobotDetector
+class Detector
 {
 	/**
 	 * Detect if the current user agent is a bot or a regular user
@@ -109,13 +109,9 @@ class RobotDetector
 				}
 				//--------------------------------------------------------------------------
 			} catch( InvalidArgumentException $oError ) {
-				//@todo Change LoggerFactory to eventdispatcher log event
-				//LoggerFactory::get()->log($oError->getMessage(). " Unknown user agent processed as \"BaseBot\"!", LoggerInterface::WARNING);
 				return new Bots\BaseBot($useragent);
 			}
 		} catch( NotAKnownBotException $oError ) {
-			//@todo Change LoggerFactory to eventdispatcher log event
-			//LoggerFactory::get()->log("User agent is not a valid bot!!! :".$useragent, LoggerInterface::WARNING);
 			return new Bots\EmptyBot;
 		}
 	}

@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use \InvalidArgumentException;
 
 /**
  * Class AbstractBot
  * Define a canvas to implement specific Bot details
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 abstract class AbstractBot implements \JsonSerializable
 {

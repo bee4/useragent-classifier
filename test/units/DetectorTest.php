@@ -7,22 +7,22 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot
+ * @package   Test\Bee4\UserAgentClassify
  */
 
-namespace Test\BeeBot\Tools\Robot;
+namespace Test\Bee4\UserAgentClassify;
 
-use BeeBot\Tools\Robot\RobotDetector;
+use Bee4\UserAgentClassify\Detector;
 
 /**
- * RobotDetector unit test
- * @package Test\BeeBot\Tools\Robot
+ * Detector unit test
+ * @package Test\Bee4\UserAgentClassify
  */
-class RobotDetectorTest extends \PHPUnit_Framework_TestCase
+class DetectorTest extends \PHPUnit_Framework_TestCase
 {
 
 	/**
-	 * @var RobotDetector
+	 * @var Detector
 	 */
 	protected $object;
 	protected $robotsUA;
@@ -180,7 +180,7 @@ class RobotDetectorTest extends \PHPUnit_Framework_TestCase
 			if($key != 'not-a-bot-UA'){
 				$this->assertEquals(
 					$robot['expectedValue'],
-					RobotDetector::whoIs($robot['useragent'])->getName()
+					Detector::whoIs($robot['useragent'])->getName()
 				);
 			}
 		}
@@ -188,10 +188,10 @@ class RobotDetectorTest extends \PHPUnit_Framework_TestCase
 
 	public function testBotButNotKnown()
 	{
-		$bot = RobotDetector::whoIs('crawler4j (http://code.google.com/p/crawler4j/)');
-		$this->assertInstanceOf('\BeeBot\Tools\Robot\Bots\BaseBot',$bot);
+		$bot = Detector::whoIs('crawler4j (http://code.google.com/p/crawler4j/)');
+		$this->assertInstanceOf('\Bee4\UserAgentClassify\Bots\BaseBot',$bot);
 
-		$bot = RobotDetector::whoIs('Opera\/9.80 (Windows NT 6.1; U; Edition Yandex; ru) Presto\/2.8.131 Version\/11.10');
-		$this->assertInstanceOf('\BeeBot\Tools\Robot\Bots\EmptyBot',$bot);
+		$bot = Detector::whoIs('Opera\/9.80 (Windows NT 6.1; U; Edition Yandex; ru) Presto\/2.8.131 Version\/11.10');
+		$this->assertInstanceOf('\Bee4\UserAgentClassify\Bots\EmptyBot',$bot);
 	}
 }

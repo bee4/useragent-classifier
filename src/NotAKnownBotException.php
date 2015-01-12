@@ -4,17 +4,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @copyright Bee4 2013
+ * @copyright Bee4 2015
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Exception
+ * @package   Bee4\UserAgentClassify
  */
 
-namespace BeeBot\Tools\Robot;
+namespace Bee4\UserAgentClassify;
 
 /**
  * NotAKnownBotException object
  * Used to detect the specific error thrown when a bot is identified as an existent one but known as a non valid bot... (normally visitor...)
- * @package BeeBot\Exception
+ * @package Bee4\UserAgentClassify
  */
 class NotAKnownBotException extends \Exception
 {}
