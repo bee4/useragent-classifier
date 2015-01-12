@@ -33,6 +33,7 @@ class Facebook extends AbstractBot
 		 */
 		if (strpos($useragent, 'facebookexternalhit') !== false) {
 			$this->setName('facebook-externalhit');
+			$this->addTags(['social','agent']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Facebook one: ' . $useragent);
 		}

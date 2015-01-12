@@ -54,20 +54,28 @@ class Yahoo extends AbstractBot
 		*/
 		if (strpos($useragent, 'Yahoo!-AdCrawler') !== false) {
 			$this->setName('yahoo-ads');
+			$this->addTags(['search','publicity']);
 		} elseif (strpos($useragent, 'YahooYSMcm') !== false) {
 			$this->setName('yahoo-search-marketing');
+			$this->addTags(['search','publicity']);
 		} elseif (strpos($useragent, 'Yahoo! Slurp') !== false) {
 			$this->setName('yahoo-slurp');
+			$this->addTags(['search']);
 		} elseif (strpos($useragent, 'Yahoo Pipes') !== false) {
 			$this->setName('yahoo-pipes');
+			$this->addTags(['feed']);
 		} elseif (strpos($useragent, 'Y!J') !== false || $useragent == 'Mozilla/4.0 (compatible; Yahoo Japan; for robot study; kasugiya)') {
 			$this->setName('yahoo-japan');
+			$this->addTags(['search']);
 		} elseif ( $useragent == 'YahooCacheSystem' || $useragent == 'YahooExternalCache' ) {
 			$this->setName('yahoo-cache');
+			$this->addTags(['search']);
 		} elseif ( substr($useragent, 0, 14) == 'YahooMessenger' || substr($useragent, 0, 20) == 'YahooMobileMessenger' ) {
 			$this->setName('yahoo-messenger');
+			$this->addTags(['browser']);
 		} elseif ( $useragent == 'Yahoo:LinkExpander:Slingstone' ) {
 			$this->setName('yahoo-tools');
+			$this->addTags(['tool']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Yahoo one: ' . $useragent);
 		}

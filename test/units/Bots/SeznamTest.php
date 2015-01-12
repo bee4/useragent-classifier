@@ -31,5 +31,6 @@ class SeznamTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Seznam('SeznamBot/3.0 (+http://fulltext.sblog.cz/)');
 		$this->assertEquals('seznam-bot', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }

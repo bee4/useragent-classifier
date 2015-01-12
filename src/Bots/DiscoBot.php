@@ -35,8 +35,10 @@ class DiscoBot extends AbstractBot
 		 */
 		if (strpos($useragent, 'discobot-news') !== false) {
 			$this->setName('discobot-news');
+			$this->addTags(['search','news']);
 		} elseif (strpos($useragent, 'discobot') !== false) {
 			$this->setName('discobot-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid DiscoBot one: ' . $useragent);
 		}

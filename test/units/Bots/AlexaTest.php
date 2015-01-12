@@ -31,8 +31,12 @@ class AlexaTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Alexa('ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)');
 		$this->assertEquals('alexa-crawler', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
+
  		$bot = new Alexa('Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; BTRS102908; GTB7.5; SIMBAR={21DEE6A8-BD2A-11E1-BFEE-F021C79C3CCF}; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.30618; .NET CLR 3.5.30729; InfoPath.1; Alexa Toolbar)');
 		$this->assertEquals('alexa-toolbar', $bot->getName());
+		$this->assertEquals(['tool','collect'], $bot->getTags());
+
 		$bot = new Alexa('Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; AlexaToolbar/amzni-3.0; GTB7.5; AskTbORJ/5.15.23.36191; .NET4.0C; .NET4.0E; AlexaToolbar/amzni-3.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; MSIECrawler)');
 		$this->assertEquals('alexa-toolbar', $bot->getName());
 	}

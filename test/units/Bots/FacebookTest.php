@@ -33,5 +33,6 @@ class FacebookTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('facebook-externalhit', $bot->getName());
 		$bot = new Facebook('facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)');
 		$this->assertEquals('facebook-externalhit', $bot->getName());
+		$this->assertEquals(['social','agent'], $bot->getTags());
 	}
 }

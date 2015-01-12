@@ -31,7 +31,10 @@ class SosoTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Soso('Sosospider+(+http://help.soso.com/webspider.htm)');
 		$this->assertEquals('soso-spider', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
+
 		$bot = new Soso('Mozilla/5.0 (compatible; Sosoimagespider/2.0; +http://help.soso.com/soso-image-spider.htm)');
 		$this->assertEquals('soso-image', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
 	}
 }

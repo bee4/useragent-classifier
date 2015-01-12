@@ -35,8 +35,10 @@ class Alexa extends AbstractBot
 		 */
 		if (strpos($useragent, 'ia_archiver') !== false) {
 			$this->setName('alexa-crawler');
+			$this->addTags(['search']);
 		} elseif (strpos($useragent, 'AlexaToolbar') !== false || strpos($useragent, 'Alexa Toolbar') !== false) {
 			$this->setName('alexa-toolbar');
+			$this->addTags(['tool','collect']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Alexa one: ' . $useragent);
 		}

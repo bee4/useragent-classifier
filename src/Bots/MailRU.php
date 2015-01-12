@@ -33,6 +33,7 @@ class MailRU extends AbstractBot
 		 */
 		if (strpos($useragent, 'Mail.RU') !== false) {
 			$this->setName('mailru-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Mail.RU one: ' . $useragent);
 		}

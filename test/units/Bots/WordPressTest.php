@@ -31,5 +31,6 @@ class WordPressTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new WordPress('WordPress/4.1.0');
 		$this->assertEquals('wordpress-bot', $bot->getName());
+		$this->assertEquals(['agent'], $bot->getTags());
 	}
 }

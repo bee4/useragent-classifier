@@ -34,6 +34,7 @@ class WordPress extends AbstractBot
 
 		if (preg_match('/^WordPress\/.*$/', $useragent, $matches)) {
 			$this->setName('wordpress-bot');
+			$this->addTags(['agent']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid WordPress one: ' . $useragent);
 		}

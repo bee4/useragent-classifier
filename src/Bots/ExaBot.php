@@ -34,8 +34,10 @@ class ExaBot extends AbstractBot
 		 */
 		if (strpos($useragent, 'Exabot-Thumbnails') !== false) {
 			$this->setName('exabot-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'Exabot') !== false) {
 			$this->setName('exabot-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Exabot one: ' . $useragent);
 		}

@@ -33,6 +33,7 @@ class Seznam extends AbstractBot
 		 */
 		if (strpos($useragent, 'SeznamBot') !== false) {
 			$this->setName('seznam-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Seznam one: ' . $useragent);
 		}

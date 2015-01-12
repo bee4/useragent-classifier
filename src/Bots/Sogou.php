@@ -37,10 +37,13 @@ class Sogou extends AbstractBot
 		 */
 		if (strpos($useragent, 'Sogou Pic') !== false) {
 			$this->setName('sogou-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'Sogou inst') !== false) {
 			$this->setName('sogou-instant');
+			$this->addTags(['search']);
 		} elseif (strpos(strtolower($useragent), 'sogou') !== false) {
 			$this->setName('sogou-spider');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Sogou one: ' . $useragent);
 		}

@@ -31,8 +31,10 @@ class ExaBotTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new ExaBot('Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)');
 		$this->assertEquals('exabot-image', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
 
 	  $bot = new ExaBot('Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)');
 	  $this->assertEquals('exabot-bot', $bot->getName());
+	  $this->assertEquals(['search'], $bot->getTags());
 	}
 }

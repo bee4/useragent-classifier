@@ -48,8 +48,28 @@ class Yandex extends AbstractBot
 
 		if (preg_match('/^Mozilla\/5\.0 \(compatible; Yandex([A-Za-z]+)\/.*$/', $useragent, $matches)) {
 			$this->setName('yandex-'.strtolower($matches[1]));
+			switch(strtolower($matches[1])) {
+				case 'blogs':
+				case 'metrika':
+				case 'bot':
+					$this->addTags(['search']);
+					break;
+				case 'antivirus':
+					$this->addTags(['search','antivirus']);
+					break;
+				case 'direct':
+					$this->addTags(['search','publicity']);
+					break;
+				case 'images':
+					$this->addTags(['search','image']);
+					break;
+				case 'imageresizer':
+					$this->addTags(['search','image','tool']);
+					break;
+			}
 		} elseif (strpos($useragent, 'Yandex.Translate') !== false) {
 			$this->setName('yandex-translate');
+			$this->addTags(['translate']);
 		} elseif ( strpos($useragent, 'Yandex Browser') !== false || strpos($useragent, 'Edition Yandex') !== false ) {
 			throw new NotAKnownBotException($useragent);
 		} else {

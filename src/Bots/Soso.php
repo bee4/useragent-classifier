@@ -33,8 +33,10 @@ class Soso extends AbstractBot
 		 */
 		if (strpos($useragent, 'Sosoimagespider') !== false) {
 			$this->setName('soso-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'Sosospider') !== false) {
 			$this->setName('soso-spider');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Soso one: ' . $useragent);
 		}
