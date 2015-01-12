@@ -67,7 +67,7 @@ class GoogleTest extends \PHPUnit_Framework_TestCase
 
 		$bot = new Google('AdsBot-Google (+http://www.google.com/adsbot.html)');
 		$this->assertEquals('google-adsbot', $bot->getName());
-		$this->assertEquals(['search','publicity'], $bot->getTags());
+		$this->assertEquals(['tool','publicity','quality'], $bot->getTags());
 
 		$bot = new Google('GoogleProducer; (+http://goo.gl/7y4SX)');
 		$this->assertEquals('google-producer', $bot->getName());
@@ -83,7 +83,7 @@ class GoogleTest extends \PHPUnit_Framework_TestCase
 
 		$bot = new Google('Mozilla/5.0 (compatible; Google Desktop/5.9.1005.12335; http://desktop.google.com/)');
 		$this->assertEquals('google-desktop', $bot->getName());
-		$this->assertEquals(['search'], $bot->getTags());
+		$this->assertEquals(['tool'], $bot->getTags());
 
 		$bot = new Google('Mozilla/5.0 (iPad; CPU OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A405 Safari/7534.48.3,gzip(gfe) (via translate.google.com)');
 		$this->assertEquals('google-translate', $bot->getName());
