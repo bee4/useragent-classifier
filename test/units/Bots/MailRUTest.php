@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\MailRU;
+use Bee4\UserAgentClassify\Bots\MailRU;
 
 /**
  * Class MailRUTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class MailRUTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,5 +31,6 @@ class MailRUTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new MailRU('Mail.RU bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/mailru-bot.html');
 		$this->assertEquals('mailru-bot', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }

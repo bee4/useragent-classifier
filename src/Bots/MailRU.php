@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class MailRU
  * Detect if a visit is a Mail.ru one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class MailRU extends AbstractBot
 {
@@ -33,6 +33,7 @@ class MailRU extends AbstractBot
 		 */
 		if (strpos($useragent, 'Mail.RU') !== false) {
 			$this->setName('mailru-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Mail.RU one: ' . $useragent);
 		}

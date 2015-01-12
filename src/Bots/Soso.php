@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class Soso
  * Detect if a visit is a Soso one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class Soso extends AbstractBot
 {
@@ -33,8 +33,10 @@ class Soso extends AbstractBot
 		 */
 		if (strpos($useragent, 'Sosoimagespider') !== false) {
 			$this->setName('soso-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'Sosospider') !== false) {
 			$this->setName('soso-spider');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Soso one: ' . $useragent);
 		}

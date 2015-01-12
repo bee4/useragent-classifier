@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\Sogou;
+use Bee4\UserAgentClassify\Bots\Sogou;
 
 /**
  * Class SogouTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class SogouTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,9 +31,14 @@ class SogouTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Sogou('Sogou Pic Spider/3.0(+http://www.sogou.com/docs/help/webmasters.htm#07)');
 		$this->assertEquals('sogou-image', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
+
 		$bot = new Sogou('Sogou inst spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07"');
 		$this->assertEquals('sogou-instant', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
+
 		$bot = new Sogou('Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)');
 		$this->assertEquals('sogou-spider', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }

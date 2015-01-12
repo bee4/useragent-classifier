@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\NotAKnownBotException;
+use Bee4\UserAgentClassify\NotAKnownBotException;
 use InvalidArgumentException;
 
 /**
  * Detect if a visit is a yandex one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class Yandex extends AbstractBot
 {
@@ -48,8 +48,28 @@ class Yandex extends AbstractBot
 
 		if (preg_match('/^Mozilla\/5\.0 \(compatible; Yandex([A-Za-z]+)\/.*$/', $useragent, $matches)) {
 			$this->setName('yandex-'.strtolower($matches[1]));
+			switch(strtolower($matches[1])) {
+				case 'blogs':
+				case 'metrika':
+				case 'bot':
+					$this->addTags(['search']);
+					break;
+				case 'antivirus':
+					$this->addTags(['search','antivirus']);
+					break;
+				case 'direct':
+					$this->addTags(['search','publicity']);
+					break;
+				case 'images':
+					$this->addTags(['search','image']);
+					break;
+				case 'imageresizer':
+					$this->addTags(['search','image','tool']);
+					break;
+			}
 		} elseif (strpos($useragent, 'Yandex.Translate') !== false) {
 			$this->setName('yandex-translate');
+			$this->addTags(['translate']);
 		} elseif ( strpos($useragent, 'Yandex Browser') !== false || strpos($useragent, 'Edition Yandex') !== false ) {
 			throw new NotAKnownBotException($useragent);
 		} else {

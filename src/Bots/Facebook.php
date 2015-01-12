@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class Facebook
  * Detect if a visit is a facebook one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class Facebook extends AbstractBot
 {
@@ -33,6 +33,7 @@ class Facebook extends AbstractBot
 		 */
 		if (strpos($useragent, 'facebookexternalhit') !== false) {
 			$this->setName('facebook-externalhit');
+			$this->addTags(['social','agent']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Facebook one: ' . $useragent);
 		}

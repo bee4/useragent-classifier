@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class GoogleBot
  * Detect if a visit is a GoogleBot one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class Google extends AbstractBot
 {
@@ -92,36 +92,50 @@ class Google extends AbstractBot
 		 */
 		if (strpos($useragent, 'Googlebot-Image') !== false) {
 			$this->setName('google-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'Googlebot-Mobile') !== false) {
 			$this->setName('google-mobile');
+			$this->addTags(['search','mobile']);
 		} elseif (strpos($useragent, 'Googlebot-News') !== false) {
 			$this->setName('google-news');
+			$this->addTags(['search','news']);
 		} elseif (strpos($useragent, 'Googlebot-Video') !== false) {
 			$this->setName('google-video');
+			$this->addTags(['search','video']);
 		} elseif (strpos($useragent, 'compatible; Mediapartners-Google') !== false) {
 			$this->setName('google-adsense-mobile');
+			$this->addTags(['search','publicity','mobile']);
 		} elseif (strpos($useragent, 'Mediapartners-Google') !== false) {
 			$this->setName('google-adsense');
+			$this->addTags(['search','publicity']);
 		} elseif (strpos($useragent, 'AdsBot-Google') !== false) {
 			$this->setName('google-adsbot');
+			$this->addTags(['tool','publicity','quality']);
 		} elseif (strpos($useragent, 'GoogleProducer') !== false) {
 			$this->setName('google-producer');
 		} elseif (strpos($useragent, 'Google-Site-Verification') !== false) {
 			$this->setName('google-site-verification');
+			$this->addTags(['tool']);
 		} elseif (strpos($useragent, 'Google-Test') !== false || strpos($useragent, 'Googlebot-Test') !== false) {
 			$this->setName('google-test');
 		} elseif (strpos($useragent, 'Feedfetcher-Google') !== false) {
 			$this->setName('google-feedfetcher');
+			$this->addTags(['feed']);
 		} elseif (strpos($useragent, 'Google Desktop') !== false) {
 			$this->setName('google-desktop');
+			$this->addTags(['tool']);
 		} elseif (strpos($useragent, 'translate.google.com') !== false) {
 			$this->setName('google-translate');
+			$this->addTags(['translate']);
 		} elseif (strpos($useragent, 'GoogleToolbar') !== false) {
 			$this->setName('google-toolbar');
+			$this->addTags(['tool','collect']);
 		} elseif (strpos($useragent, 'AppEngine-Google') !== false) {
 			$this->setName('google-appengine');
+			$this->addTags(['cloud']);
 		} elseif (strpos($useragent, 'Googlebot') !== false) {
 			$this->setName('google-bot');
+			$this->addTags(['search']);
 		} elseif (strpos($useragent, 'Google') !== false) {
 			$this->setName('google-unknown');
 		} else {

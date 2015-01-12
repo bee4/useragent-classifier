@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use \InvalidArgumentException;
 
 /**
  * Class AbstractBot
  * Define a canvas to implement specific Bot details
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 abstract class AbstractBot implements \JsonSerializable
 {
@@ -25,6 +25,12 @@ abstract class AbstractBot implements \JsonSerializable
 	 * @var String
 	 */
 	private $name;
+
+	/**
+	 * Bot tags used to categorize behaviour
+	 * @var array
+	 */
+	private $tags = [];
 
 	/**
 	 * Set the name of current bot
@@ -50,6 +56,26 @@ abstract class AbstractBot implements \JsonSerializable
 	}
 
 	/**
+	 * Add some tags to the current bot
+	 * @param array $tags
+	 */
+	public function addTags(array $tags) {
+		$this->tags = array_merge($this->tags, array_values($tags));
+	}
+
+	/**
+	 * Retrieve tag list
+	 * @return array|null
+	 */
+	public function getTags() {
+		if( count($this->tags) > 0 ) {
+			return $this->tags;
+		}
+
+		return null;
+	}
+
+	/**
 	 * Retrieve global bot name
 	 * @return String
 	 */
@@ -67,7 +93,8 @@ abstract class AbstractBot implements \JsonSerializable
 	{
 		return array(
 			'bot' => $this->getBot(),
-			'name' => $this->getName()
+			'name' => $this->getName(),
+			'tags' => $this->getTags()
 		);
 	}
 }

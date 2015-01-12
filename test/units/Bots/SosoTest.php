@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\Soso;
+use Bee4\UserAgentClassify\Bots\Soso;
 
 /**
  * Class SosoTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class SosoTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,7 +31,10 @@ class SosoTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Soso('Sosospider+(+http://help.soso.com/webspider.htm)');
 		$this->assertEquals('soso-spider', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
+
 		$bot = new Soso('Mozilla/5.0 (compatible; Sosoimagespider/2.0; +http://help.soso.com/soso-image-spider.htm)');
 		$this->assertEquals('soso-image', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
 	}
 }

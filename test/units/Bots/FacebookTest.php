@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\Facebook;
+use Bee4\UserAgentClassify\Bots\Facebook;
 
 /**
  * Class FacebookTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class FacebookTest extends \PHPUnit_Framework_TestCase
 {
@@ -33,5 +33,6 @@ class FacebookTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('facebook-externalhit', $bot->getName());
 		$bot = new Facebook('facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)');
 		$this->assertEquals('facebook-externalhit', $bot->getName());
+		$this->assertEquals(['social','agent'], $bot->getTags());
 	}
 }

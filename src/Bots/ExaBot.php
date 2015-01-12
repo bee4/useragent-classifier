@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class ExaBot
  * Detect if a visit is an ExaBot one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class ExaBot extends AbstractBot
 {
@@ -34,8 +34,10 @@ class ExaBot extends AbstractBot
 		 */
 		if (strpos($useragent, 'Exabot-Thumbnails') !== false) {
 			$this->setName('exabot-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'Exabot') !== false) {
 			$this->setName('exabot-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Exabot one: ' . $useragent);
 		}

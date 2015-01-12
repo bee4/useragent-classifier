@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\Bing;
+use Bee4\UserAgentClassify\Bots\Bing;
 
 /**
  * Class BingTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class BingTest extends \PHPUnit_Framework_TestCase
 {
@@ -33,18 +33,22 @@ class BingTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('bing-bot', $bot->getName());
 		$bot = new Bing('Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)');
 		$this->assertEquals('bing-bot', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 
 		$bot = new Bing('msnbot-UDiscovery/2.0b (+http://search.msn.com/msnbot.htm)');
 		$this->assertEquals('bing-msn', $bot->getName());
 		$bot = new Bing('msnbot/2.0b (+http://search.msn.com/msnbot.htm)');
 		$this->assertEquals('bing-msn', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 
 		$bot = new Bing('msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)');
 		$this->assertEquals('bing-msn-media', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 
 		$bot = new Bing('adidxbot/1.1 (+http://search.msn.com/msnbot.htm)');
 		$this->assertEquals('bing-adcenter', $bot->getName());
 		$bot = new Bing('adidxbot/2.0 (+http://search.msn.com/msnbot.htm)');
 		$this->assertEquals('bing-adcenter', $bot->getName());
+		$this->assertEquals(['search','publicity'], $bot->getTags());
 	}
 }

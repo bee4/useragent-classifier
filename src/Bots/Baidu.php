@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class Baidu
  * Detect if a visit is a Baidu one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class Baidu extends AbstractBot
 {
@@ -41,10 +41,13 @@ class Baidu extends AbstractBot
 		 */
 		if (strpos($useragent, 'Baiduspider-image') !== false) {
 			$this->setName('baidu-image');
+			$this->addTags(['search','image']);
 		} elseif (strpos($useragent, 'BaiduGame') !== false) {
 			$this->setName('baidu-game');
+			$this->addTags(['search','game']);
 		} elseif (strpos($useragent, 'Baiduspider') !== false || strpos($useragent, 'baidu') !== false) {
 			$this->setName('baidu-spider');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Baidu one: ' . $useragent);
 		}

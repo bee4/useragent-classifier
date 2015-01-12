@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   BeeBot\Tools\Robot\Bots
+ * @package   Bee4\UserAgentClassify\Bots
  */
 
-namespace BeeBot\Tools\Robot\Bots;
+namespace Bee4\UserAgentClassify\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class DiscoBot
  * Detect if a visit is a DiscoBot one
- * @package BeeBot\Tools\Robot\Bots
+ * @package Bee4\UserAgentClassify\Bots
  */
 class DiscoBot extends AbstractBot
 {
@@ -35,8 +35,10 @@ class DiscoBot extends AbstractBot
 		 */
 		if (strpos($useragent, 'discobot-news') !== false) {
 			$this->setName('discobot-news');
+			$this->addTags(['search','news']);
 		} elseif (strpos($useragent, 'discobot') !== false) {
 			$this->setName('discobot-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid DiscoBot one: ' . $useragent);
 		}

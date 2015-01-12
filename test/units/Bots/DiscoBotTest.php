@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\DiscoBot;
+use Bee4\UserAgentClassify\Bots\DiscoBot;
 
 /**
  * Class DiscobotTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class DiscoBotTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,7 +31,10 @@ class DiscoBotTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new DiscoBot('Mozilla/5.0 (compatible; discobot-news; +http://discoveryengine.com/discobot.html)');
 		$this->assertEquals('discobot-news', $bot->getName());
+		$this->assertEquals(['search','news'], $bot->getTags());
+
 		$bot = new DiscoBot('Mozilla/5.0 (compatible; discobot/2.0; +http://discoveryengine.com/discobot.html)');
 		$this->assertEquals('discobot-bot', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }

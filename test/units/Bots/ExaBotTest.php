@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\BeeBot\Tools\Robot\Bots
+ * @package   Test\Bee4\UserAgentClassify\Bots
  */
-namespace Test\BeeBot\Tools\Robot\Bots;
+namespace Test\Bee4\UserAgentClassify\Bots;
 
-use BeeBot\Tools\Robot\Bots\ExaBot;
+use Bee4\UserAgentClassify\Bots\ExaBot;
 
 /**
  * Class ExaBotTest
- * @package Test\BeeBot\Tools\Robot\Bots
+ * @package Test\Bee4\UserAgentClassify\Bots
  */
 class ExaBotTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,8 +31,10 @@ class ExaBotTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new ExaBot('Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)');
 		$this->assertEquals('exabot-image', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
 
 	  $bot = new ExaBot('Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)');
 	  $this->assertEquals('exabot-bot', $bot->getName());
+	  $this->assertEquals(['search'], $bot->getTags());
 	}
 }
