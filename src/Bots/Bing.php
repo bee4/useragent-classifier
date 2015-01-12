@@ -41,12 +41,16 @@ class Bing extends AbstractBot
 		 */
 		if (strpos($useragent, 'msnbot-media') !== false) {
 			$this->setName('bing-msn-media');
+			$this->addTags(['search']);
 		} elseif (strpos($useragent, 'adidxbot') !== false) {
 			$this->setName('bing-adcenter');
+			$this->addTags(['search','publicity']);
 		} elseif (strpos($useragent, 'msnbot') !== false) {
 			$this->setName('bing-msn');
+			$this->addTags(['search']);
 		} elseif (strpos(strtolower($useragent), 'bing') !== false) {
 			$this->setName('bing-bot');
+			$this->addTags(['search']);
 		} else {
 			throw new InvalidArgumentException('UserAgent given is not a valid Bing one: ' . $useragent);
 		}
