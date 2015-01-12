@@ -31,5 +31,6 @@ class MailRUTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new MailRU('Mail.RU bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/mailru-bot.html');
 		$this->assertEquals('mailru-bot', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }

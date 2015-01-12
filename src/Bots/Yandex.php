@@ -61,8 +61,10 @@ class Yandex extends AbstractBot
 					$this->addTags(['search','publicity']);
 					break;
 				case 'images':
-				case 'imageresizer':
 					$this->addTags(['search','image']);
+					break;
+				case 'imageresizer':
+					$this->addTags(['search','image','tool']);
 					break;
 			}
 		} elseif (strpos($useragent, 'Yandex.Translate') !== false) {

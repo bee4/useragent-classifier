@@ -31,9 +31,14 @@ class SogouTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Sogou('Sogou Pic Spider/3.0(+http://www.sogou.com/docs/help/webmasters.htm#07)');
 		$this->assertEquals('sogou-image', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
+
 		$bot = new Sogou('Sogou inst spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07"');
 		$this->assertEquals('sogou-instant', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
+
 		$bot = new Sogou('Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)');
 		$this->assertEquals('sogou-spider', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }

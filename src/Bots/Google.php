@@ -104,7 +104,7 @@ class Google extends AbstractBot
 			$this->addTags(['search','video']);
 		} elseif (strpos($useragent, 'compatible; Mediapartners-Google') !== false) {
 			$this->setName('google-adsense-mobile');
-			$this->addTags(['search','publicity']);
+			$this->addTags(['search','publicity','mobile']);
 		} elseif (strpos($useragent, 'Mediapartners-Google') !== false) {
 			$this->setName('google-adsense');
 			$this->addTags(['search','publicity']);

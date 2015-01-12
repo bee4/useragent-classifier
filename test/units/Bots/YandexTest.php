@@ -41,23 +41,30 @@ class YandexTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new Yandex('Mozilla/5.0 (compatible; YandexAntivirus/2.0; +http://yandex.com/bots)');
 		$this->assertEquals('yandex-antivirus', $bot->getName());
+		$this->assertEquals(['search','antivirus'], $bot->getTags());
 
 		$bot = new Yandex('Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)');
 		$this->assertEquals('yandex-images', $bot->getName());
+		$this->assertEquals(['search','image'], $bot->getTags());
 
 		$bot = new Yandex('Mozilla/5.0 (compatible; YandexDirect/3.0; +http://yandex.com/bots)');
 		$this->assertEquals('yandex-direct', $bot->getName());
+		$this->assertEquals(['search','publicity'], $bot->getTags());
 
 		$bot = new Yandex('Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; B; +http://yandex.com/bots)');
 		$this->assertEquals('yandex-blogs', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 
 		$bot = new Yandex('Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)');
 		$this->assertEquals('yandex-metrika', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 
 		$bot = new Yandex('Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)');
 		$this->assertEquals('yandex-imageresizer', $bot->getName());
+		$this->assertEquals(['search','image','tool'], $bot->getTags());
 
 		$bot = new Yandex('Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0) Yandex.Translate');
 		$this->assertEquals('yandex-translate', $bot->getName());
+		$this->assertEquals(['translate'], $bot->getTags());
 	}
 }

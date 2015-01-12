@@ -31,7 +31,10 @@ class DiscoBotTest extends \PHPUnit_Framework_TestCase
 	{
 		$bot = new DiscoBot('Mozilla/5.0 (compatible; discobot-news; +http://discoveryengine.com/discobot.html)');
 		$this->assertEquals('discobot-news', $bot->getName());
+		$this->assertEquals(['search','news'], $bot->getTags());
+
 		$bot = new DiscoBot('Mozilla/5.0 (compatible; discobot/2.0; +http://discoveryengine.com/discobot.html)');
 		$this->assertEquals('discobot-bot', $bot->getName());
+		$this->assertEquals(['search'], $bot->getTags());
 	}
 }
