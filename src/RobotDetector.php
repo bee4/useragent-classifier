@@ -11,7 +11,6 @@
 
 namespace BeeBot\Tools\Robot;
 
-use BeeBot\Exception\NotAKnownBotException;
 use InvalidArgumentException;
 
 /**
