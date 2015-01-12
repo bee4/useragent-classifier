@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\Native\InvalidArgumentException;
+use \InvalidArgumentException;
 
 /**
  * Class AbstractBot

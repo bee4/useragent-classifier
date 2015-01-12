@@ -11,7 +11,7 @@
 
 namespace BeeBot\Tools\Robot\Bots;
 
-use BeeBot\Exception\NotAKnownBotException;
+use BeeBot\Tools\Robot\NotAKnownBotException;
 
 /**
  * The basic bot detector which can track unknown bots which came with a useragent specifically defined as a bot/spider/crawler
