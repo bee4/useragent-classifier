@@ -28,8 +28,8 @@ class Soso extends AbstractBot
 	{
 		//Soso spider (search bot): http://www.botopedia.org/user-agent-list/search-bots/soso-spider.html
 		/**
-		Sosospider+(+http://help.soso.com/webspider.htm)
-		Mozilla/5.0 (compatible; Sosoimagespider/2.0; +http://help.soso.com/soso-image-spider.htm)
+		 * Sosospider+(+http://help.soso.com/webspider.htm)
+		 * Mozilla/5.0 (compatible; Sosoimagespider/2.0; +http://help.soso.com/soso-image-spider.htm)
 		 */
 		if (strpos($useragent, 'Sosoimagespider') !== false) {
 			$this->setName('soso-image');

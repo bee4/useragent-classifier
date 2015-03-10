@@ -29,7 +29,7 @@ class Seznam extends AbstractBot
 	{
 		//Seznam bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/seznam-bot.html
 		/**
-		SeznamBot/3.0 (+http://fulltext.sblog.cz/)
+		 * SeznamBot/3.0 (+http://fulltext.sblog.cz/)
 		 */
 		if (strpos($useragent, 'SeznamBot') !== false) {
 			$this->setName('seznam-bot');

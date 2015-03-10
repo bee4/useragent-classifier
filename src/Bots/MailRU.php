@@ -29,7 +29,7 @@ class MailRU extends AbstractBot
 	{
 		//Mail.RU bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/mailru-bot.html
 		/**
-		Mozilla/5.0 (compatible; Mail.RU/2.0)
+		 * Mozilla/5.0 (compatible; Mail.RU/2.0)
 		 */
 		if (strpos($useragent, 'Mail.RU') !== false) {
 			$this->setName('mailru-bot');

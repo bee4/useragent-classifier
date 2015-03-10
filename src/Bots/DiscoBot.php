@@ -30,8 +30,8 @@ class DiscoBot extends AbstractBot
 	{
 		//DiscoBot bot (search bot): http://www.botopedia.org/user-agent-list/search-bots/discobot.html
 		/**
-		Mozilla/5.0 (compatible; discobot-news; +http://discoveryengine.com/discobot.html)
-		Mozilla/5.0 (compatible; discobot/2.0; +http://discoveryengine.com/discobot.html)
+		 * Mozilla/5.0 (compatible; discobot-news; +http://discoveryengine.com/discobot.html)
+		 * Mozilla/5.0 (compatible; discobot/2.0; +http://discoveryengine.com/discobot.html)
 		 */
 		if (strpos($useragent, 'discobot-news') !== false) {
 			$this->setName('discobot-news');

@@ -30,14 +30,14 @@ class Bing extends AbstractBot
 		//BingBot (search bot): http://www.botopedia.org/user-agent-list/search-bots/bingbot.html
 		//AdidxBot (crawler): http://www.botopedia.org/user-agent-list/crawlers/item/343.html, http://user-agent-string.info/list-of-ua/bot-detail?bot=adidxbot
 		/**
-		Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b
-		msnbot-UDiscovery/2.0b (+http://search.msn.com/msnbot.htm)
-		msnbot/2.0b (+http://search.msn.com/msnbot.htm)
-		msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)
-		Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
-
-		adidxbot/1.1 (+http://search.msn.com/msnbot.htm)
-		adidxbot/2.0 (+http://search.msn.com/msnbot.htm)
+		 * Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b
+		 * msnbot-UDiscovery/2.0b (+http://search.msn.com/msnbot.htm)
+		 * msnbot/2.0b (+http://search.msn.com/msnbot.htm)
+		 * msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)
+		 * Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+ 		 *
+		 * adidxbot/1.1 (+http://search.msn.com/msnbot.htm)
+		 * adidxbot/2.0 (+http://search.msn.com/msnbot.htm)
 		 */
 		if (strpos($useragent, 'msnbot-media') !== false) {
 			$this->setName('bing-msn-media');

@@ -28,8 +28,8 @@ class Facebook extends AbstractBot
 	{
 		//Facebook External Hit (Social media agent): http://www.botopedia.org/user-agent-list/social-media-agents/facebook-external-hit
 		/**
-		facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)
-		facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
+		 * facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)
+		 * facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
 		 */
 		if (strpos($useragent, 'facebookexternalhit') !== false) {
 			$this->setName('facebook-externalhit');

@@ -29,8 +29,8 @@ class ExaBot extends AbstractBot
 	{
 		//ExaBot (crawler): http://www.botopedia.org/user-agent-list/crawlers/item/336.html
 		/**
-		Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)
-		Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)
+		 * Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)
+		 * Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)
 		 */
 		if (strpos($useragent, 'Exabot-Thumbnails') !== false) {
 			$this->setName('exabot-image');

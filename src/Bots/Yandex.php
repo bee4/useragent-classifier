@@ -34,15 +34,15 @@ class Yandex extends AbstractBot
 		//Yandex Bot reference: http://help.yandex.com/search/robots/user-agent.xml
 
 		/**
-		Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexAntivirus/2.0; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexDirect/3.0; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; B; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; B; +http://yandex.com/bots)
-		Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0) Yandex.Translate
+		 * Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexAntivirus/2.0; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexDirect/3.0; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; B; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; B; +http://yandex.com/bots)
+		 * Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0) Yandex.Translate
 		 */
 
 

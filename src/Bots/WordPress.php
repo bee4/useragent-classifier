@@ -29,7 +29,7 @@ class WordPress extends AbstractBot
 	public function __construct($useragent)
 	{
 		/**
-		WordPress/X.X.X
+		 * WordPress/X.X.X
 		 */
 
 		if (preg_match('/^WordPress\/.*$/', $useragent, $matches)) {
