@@ -1,20 +1,19 @@
 bee4/useragent-classify
 ======================
 
-[![Build Status](https://travis-ci.org/bee4/useragent-classify.svg?branch=develop)](https://travis-ci.org/bee4/useragent-classify)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/bee4/useragent-classify/badges/quality-score.png?s=e908698796250470837da1aee3d5f1de58abe42b)](https://scrutinizer-ci.com/g/bee4/useragent-classify/)
-[![Code Coverage](https://scrutinizer-ci.com/g/bee4/useragent-classify/badges/coverage.png?s=458223269fcf1205044aaa271d0bbfc08f1c7f95)](https://scrutinizer-ci.com/g/bee4/useragent-classify/)
+[![Build Status](https://img.shields.io/travis/bee4/useragent-classify.svg?style=flat-square)](https://travis-ci.org/bee4/useragent-classify)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/bee4/useragent-classify.svg?style=flat-square)](https://scrutinizer-ci.com/g/bee4/useragent-classify/?branch=develop)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/bee4/useragent-classify.svg?style=flat-square)](https://scrutinizer-ci.com/g/bee4/useragent-classify/)
 
-[![License](https://poser.pugx.org/bee4/useragent-classify/license.png)](https://packagist.org/packages/bee4/useragent-classify)
+[![License](https://img.shields.io/packagist/l/bee4/useragent-classify.svg?style=flat-square)](https://packagist.org/packages/bee4/useragent-classify)
 
 This library allow to track and detect who is behind useragents :)
 
 
 Installing
 ----------
-[![Latest Stable Version](https://poser.pugx.org/bee4/useragent-classify/v/stable.png)](https://packagist.org/packages/bee4/useragent-classify)
-[![Total Downloads](https://poser.pugx.org/bee4/useragent-classify/downloads.png)](https://packagist.org/packages/bee4/useragent-classify)
-[![Latest Unstable Version](https://poser.pugx.org/bee4/useragent-classify/v/unstable.png)](https://packagist.org/packages/bee4/useragent-classify)
+[![Latest Stable Version](https://img.shields.io/packagist/v/bee4/useragent-classify.svg?style=flat-square)](https://packagist.org/packages/bee4/useragent-classify)
+[![Total Downloads](https://img.shields.io/packagist/dm/bee4/useragent-classify.svg?style=flat-square)](https://packagist.org/packages/bee4/useragent-classify)
 
 This project can be installed using Composer. Add the following to your composer.json:
 
