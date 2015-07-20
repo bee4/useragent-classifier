@@ -35,7 +35,7 @@ class Bing extends AbstractBot
 		 * msnbot/2.0b (+http://search.msn.com/msnbot.htm)
 		 * msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)
 		 * Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
- 		 *
+			 *
 		 * adidxbot/1.1 (+http://search.msn.com/msnbot.htm)
 		 * adidxbot/2.0 (+http://search.msn.com/msnbot.htm)
 		 */

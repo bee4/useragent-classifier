@@ -40,8 +40,8 @@ abstract class AbstractBot implements \JsonSerializable
 	 */
 	protected function setName($name)
 	{
-		if( !is_string($name) )
-			throw new InvalidArgumentException('Name given must be a string!!');
+		if( !is_string($name) ) {
+			throw new InvalidArgumentException('Name given must be a string!!'); }
 
 		$this->name = $name;
 	}
