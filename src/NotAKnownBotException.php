@@ -17,4 +17,6 @@ namespace Bee4\UserAgentClassify;
  * @package Bee4\UserAgentClassify
  */
 class NotAKnownBotException extends \Exception
-{}
+{
+
+}

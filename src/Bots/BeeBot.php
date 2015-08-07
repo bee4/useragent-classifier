@@ -20,19 +20,20 @@ use InvalidArgumentException;
  */
 class BeeBot extends AbstractBot
 {
-	/**
-	 * Bee4 bot constructor
-	 * @param String $useragent The useragent used for detection
-	 * @throws InvalidArgumentException
-	 */
-	public function __construct($useragent)
-	{
-		/**
-		 * Bee4 - BeeBot/1.0
-		 */
-		if (substr($useragent,0,7) == 'Bee4 - ') {
-			$this->setName('beebot-crawler'); }
-		else {
-			throw new InvalidArgumentException('UserAgent given is not a valid BeeBot one: ' . $useragent); }
-	}
+    /**
+     * Bee4 bot constructor
+     * @param String $useragent The useragent used for detection
+     * @throws InvalidArgumentException
+     */
+    public function __construct($useragent)
+    {
+        /**
+         * Bee4 - BeeBot/1.0
+         */
+        if (substr($useragent, 0, 7) == 'Bee4 - ') {
+            $this->setName('beebot-crawler'); 
+        } else {
+            throw new InvalidArgumentException('UserAgent given is not a valid BeeBot one: ' . $useragent);
+        }
+    }
 }

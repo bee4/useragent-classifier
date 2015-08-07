@@ -17,11 +17,11 @@ namespace Bee4\UserAgentClassify\Bots;
  */
 class EmptyBot extends AbstractBot
 {
-	/**
-	 * EmptyBot bot constructor
-	 */
-	public function __construct()
-	{
-		$this->setName('');
-	}
+    /**
+     * EmptyBot bot constructor
+     */
+    public function __construct()
+    {
+        $this->setName('');
+    }
 }
