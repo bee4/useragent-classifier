@@ -22,7 +22,7 @@ class EmptyBotTest extends \PHPUnit_Framework_TestCase
 	public function testBot()
 	{
 		$bot = new EmptyBot();
-		$this->assertEquals('', $bot->getName());
+		$this->assertEquals('empty', $bot->getName());
 		$this->assertEquals('emptybot', $bot->getBot());
 	}
 }

@@ -166,7 +166,7 @@ class DetectorTest extends \PHPUnit_Framework_TestCase
 		$this->robotsUA['visitor']['expectedValue'] = "visitor";
 
 		$this->robotsUA['emptybot']['useragent'] = "-";
-		$this->robotsUA['emptybot']['expectedValue'] = "";
+		$this->robotsUA['emptybot']['expectedValue'] = "empty";
 
 		$this->robotsUA['wordpress']['useragent'] = "WordPress/4.1.0";
 		$this->robotsUA['wordpress']['expectedValue'] = "wordpress-bot";
