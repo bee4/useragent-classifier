@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   Bee4\UserAgentClassify\Bots
+ * @package   Bee4\UserAgent\Classifier\Bots
  */
 
-namespace Bee4\UserAgentClassify\Bots;
+namespace Bee4\UserAgent\Classifier\Bots;
 
-use Bee4\UserAgentClassify\NotAKnownBotException;
+use Bee4\UserAgent\Classifier\NotAKnownBotException;
 use InvalidArgumentException;
 
 /**
  * Detect if a visit is a yandex one
- * @package Bee4\UserAgentClassify\Bots
+ * @package Bee4\UserAgent\Classifier\Bots
  */
 class Yandex extends AbstractBot
 {

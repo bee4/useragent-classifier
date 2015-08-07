@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2014
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   Bee4\UserAgentClassify\Bots
+ * @package   Bee4\UserAgent\Classifier\Bots
  */
 
-namespace Bee4\UserAgentClassify\Bots;
+namespace Bee4\UserAgent\Classifier\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class WordPress
  * Detect if a visit is a wordpress one
- * @package Bee4\UserAgentClassify\Bots
+ * @package Bee4\UserAgent\Classifier\Bots
  */
 class WordPress extends AbstractBot
 {

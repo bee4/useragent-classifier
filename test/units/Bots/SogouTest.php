@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\Bee4\UserAgentClassify\Bots
+ * @package   Test\Bee4\UserAgent\Classifier\Bots
  */
-namespace Test\Bee4\UserAgentClassify\Bots;
+namespace Test\Bee4\UserAgent\Classifier\Bots;
 
-use Bee4\UserAgentClassify\Bots\Sogou;
+use Bee4\UserAgent\Classifier\Bots\Sogou;
 
 /**
  * Class SogouTest
- * @package Test\Bee4\UserAgentClassify\Bots
+ * @package Test\Bee4\UserAgent\Classifier\Bots
  */
 class SogouTest extends \PHPUnit_Framework_TestCase
 {

@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\Bee4\UserAgentClassify\Bots
+ * @package   Test\Bee4\UserAgent\Classifier\Bots
  */
-namespace Test\Bee4\UserAgentClassify\Bots;
+namespace Test\Bee4\UserAgent\Classifier\Bots;
 
-use Bee4\UserAgentClassify\Bots\WordPress;
+use Bee4\UserAgent\Classifier\Bots\WordPress;
 
 /**
  * Class WordPressTest
- * @package Test\Bee4\UserAgentClassify\Bots
+ * @package Test\Bee4\UserAgent\Classifier\Bots
  */
 class WordPressTest extends \PHPUnit_Framework_TestCase
 {

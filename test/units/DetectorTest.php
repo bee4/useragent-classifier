@@ -7,16 +7,16 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\Bee4\UserAgentClassify
+ * @package   Test\Bee4\UserAgent\Classifier
  */
 
-namespace Test\Bee4\UserAgentClassify;
+namespace Test\Bee4\UserAgent\Classifier;
 
-use Bee4\UserAgentClassify\Detector;
+use Bee4\UserAgent\Classifier\Detector;
 
 /**
  * Detector unit test
- * @package Test\Bee4\UserAgentClassify
+ * @package Test\Bee4\UserAgent\Classifier
  */
 class DetectorTest extends \PHPUnit_Framework_TestCase
 {
@@ -189,9 +189,9 @@ class DetectorTest extends \PHPUnit_Framework_TestCase
 	public function testBotButNotKnown()
 	{
 		$bot = Detector::whoIs('crawler4j (http://code.google.com/p/crawler4j/)');
-		$this->assertInstanceOf('\Bee4\UserAgentClassify\Bots\BaseBot',$bot);
+		$this->assertInstanceOf('\Bee4\UserAgent\Classifier\Bots\BaseBot',$bot);
 
 		$bot = Detector::whoIs('Opera\/9.80 (Windows NT 6.1; U; Edition Yandex; ru) Presto\/2.8.131 Version\/11.10');
-		$this->assertInstanceOf('\Bee4\UserAgentClassify\Bots\EmptyBot',$bot);
+		$this->assertInstanceOf('\Bee4\UserAgent\Classifier\Bots\EmptyBot',$bot);
 	}
 }

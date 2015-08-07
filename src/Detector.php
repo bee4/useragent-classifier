@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author  Stephane HULARD <s.hulard@chstudio.fr>
- * @package Bee4\UserAgentClassify
+ * @package Bee4\UserAgent\Classifier
  */
 
-namespace Bee4\UserAgentClassify;
+namespace Bee4\UserAgent\Classifier;
 
 use InvalidArgumentException;
 
 /**
  * Class RobotDetector
  * Define different methods to detect bots from logs
- * @package Bee4\UserAgentClassify
+ * @package Bee4\UserAgent\Classifier
  */
 class Detector
 {

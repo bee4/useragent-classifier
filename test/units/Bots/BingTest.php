@@ -7,15 +7,15 @@
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
  * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\Bee4\UserAgentClassify\Bots
+ * @package   Test\Bee4\UserAgent\Classifier\Bots
  */
-namespace Test\Bee4\UserAgentClassify\Bots;
+namespace Test\Bee4\UserAgent\Classifier\Bots;
 
-use Bee4\UserAgentClassify\Bots\Bing;
+use Bee4\UserAgent\Classifier\Bots\Bing;
 
 /**
  * Class BingTest
- * @package Test\Bee4\UserAgentClassify\Bots
+ * @package Test\Bee4\UserAgent\Classifier\Bots
  */
 class BingTest extends \PHPUnit_Framework_TestCase
 {

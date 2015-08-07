@@ -6,16 +6,16 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   Bee4\UserAgentClassify\Bots
+ * @package   Bee4\UserAgent\Classifier\Bots
  */
 
-namespace Bee4\UserAgentClassify\Bots;
+namespace Bee4\UserAgent\Classifier\Bots;
 
-use Bee4\UserAgentClassify\NotAKnownBotException;
+use Bee4\UserAgent\Classifier\NotAKnownBotException;
 
 /**
  * The basic bot detector which can track unknown bots which came with a useragent specifically defined as a bot/spider/crawler
- * @package Bee4\UserAgentClassify\Bots
+ * @package Bee4\UserAgent\Classifier\Bots
  */
 class BaseBot extends AbstractBot
 {

@@ -6,14 +6,14 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   Bee4\UserAgentClassify\Bots
+ * @package   Bee4\UserAgent\Classifier\Bots
  */
 
-namespace Bee4\UserAgentClassify\Bots;
+namespace Bee4\UserAgent\Classifier\Bots;
 
 /**
  * Define an EmptyBot used when no bot is returned
- * @package Bee4\UserAgentClassify\Bots
+ * @package Bee4\UserAgent\Classifier\Bots
  */
 class EmptyBot extends AbstractBot
 {

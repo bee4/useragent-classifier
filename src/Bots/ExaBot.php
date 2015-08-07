@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   Bee4\UserAgentClassify\Bots
+ * @package   Bee4\UserAgent\Classifier\Bots
  */
 
-namespace Bee4\UserAgentClassify\Bots;
+namespace Bee4\UserAgent\Classifier\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class ExaBot
  * Detect if a visit is an ExaBot one
- * @package Bee4\UserAgentClassify\Bots
+ * @package Bee4\UserAgent\Classifier\Bots
  */
 class ExaBot extends AbstractBot
 {

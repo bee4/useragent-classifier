@@ -1,5 +1,5 @@
 {
-  "name": "bee4/useragent-classify",
+  "name": "bee4/useragent-classifier",
   "description": "A library to work with UserAgent detection and classification",
   "license": "Apache-2.0",
   "authors": [
@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Bee4\\UserAgentClassify\\": "src"
+      "Bee4\\UserAgent\\Classifier\\": "src"
     }
   },
   "scripts": {

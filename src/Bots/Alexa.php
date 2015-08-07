@@ -6,17 +6,17 @@
  *
  * @copyright Bee4 2013
  * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @package   Bee4\UserAgentClassify\Bots
+ * @package   Bee4\UserAgent\Classifier\Bots
  */
 
-namespace Bee4\UserAgentClassify\Bots;
+namespace Bee4\UserAgent\Classifier\Bots;
 
 use InvalidArgumentException;
 
 /**
  * Class Alexa
- * Detect if a visit is a Alexa one
- * @package Bee4\UserAgentClassify\Bots
+ * Detect if a visit is an Alexa one
+ * @package Bee4\UserAgent\Classifier\Bots
  */
 class Alexa extends AbstractBot
 {
