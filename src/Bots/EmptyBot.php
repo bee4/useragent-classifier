@@ -22,6 +22,6 @@ class EmptyBot extends AbstractBot
      */
     public function __construct()
     {
-        $this->setName('');
+        $this->setName('empty');
     }
 }
