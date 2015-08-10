@@ -27,7 +27,11 @@ class BaseBot extends AbstractBot
     public function __construct($useragent)
     {
         $lower = strtolower($useragent);
-        if (strpos($lower, 'bot') !== false) {
+        if( preg_match('/^crawler4j/', $useragent) === 1 ) {
+            $this->setName('crawler4j');
+        } elseif( preg_match('/^scrapy/', $useragent) === 1 ) {
+            $this->setName('scrapy');
+        } elseif (strpos($lower, 'bot') !== false) {
             $this->setName('base-bot');
         } elseif (strpos($lower, 'crawler') !== false) {
             $this->setName('base-crawler');
