@@ -18,12 +18,6 @@ abstract class AbstractBot implements \JsonSerializable
     private $name;
 
     /**
-     * Bot tags used to categorize behaviour
-     * @var array
-     */
-    private $tags = [];
-
-    /**
      * Set the name of current bot
      * This name is a precise one (googlebot-image or googlebot)
      *
@@ -48,34 +42,12 @@ abstract class AbstractBot implements \JsonSerializable
     }
 
     /**
-     * Add some tags to the current bot
-     * @param array $tags
-     */
-    public function addTags(array $tags)
-    {
-        $this->tags = array_merge($this->tags, array_values($tags));
-    }
-
-    /**
-     * Retrieve tag list
-     * @return array|null
-     */
-    public function getTags()
-    {
-        if (count($this->tags) > 0) {
-            return $this->tags;
-        }
-
-        return null;
-    }
-
-    /**
      * Retrieve global bot name
      * @return String
      */
-    public function getBot()
+    public static function getBot()
     {
-        $parts = explode('\\', get_class($this));
+        $parts = explode('\\', get_called_class());
         return strtolower(array_pop($parts));
     }
 
@@ -87,8 +59,7 @@ abstract class AbstractBot implements \JsonSerializable
     {
         return array(
             'bot' => $this->getBot(),
-            'name' => $this->getName(),
-            'tags' => $this->getTags()
+            'name' => $this->getName()
         );
     }
 }
