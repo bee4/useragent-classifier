@@ -21,7 +21,7 @@ abstract class AbstractTaggedBot extends AbstractBot
      */
     public function addTags(array $tags)
     {
-        $this->tags = array_merge($this->tags, array_values($tags));
+        $this->tags = array_values(array_unique(array_merge($this->tags, $tags)));
     }
 
     /**
