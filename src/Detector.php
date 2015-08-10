@@ -14,7 +14,7 @@ class Detector
     /**
      * Detect if the current user agent is a bot or a regular user
      * @param String $useragent User agent to be tested
-     * @return Bots\AbstractBot
+     * @return BotInterface
      */
     public static function whoIs($useragent)
     {

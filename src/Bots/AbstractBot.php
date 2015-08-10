@@ -2,6 +2,7 @@
 
 namespace Bee4\UserAgent\Classifier\Bots;
 
+use Bee4\UserAgent\Classifier\BotInterface;
 use InvalidArgumentException;
 
 /**
@@ -9,7 +10,7 @@ use InvalidArgumentException;
  * Define a canvas to implement specific Bot details
  * @package Bee4\UserAgent\Classifier\Bots
  */
-abstract class AbstractBot implements \JsonSerializable
+abstract class AbstractBot implements \JsonSerializable, BotInterface
 {
     /**
      * Specific bot name
