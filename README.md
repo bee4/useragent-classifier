@@ -38,18 +38,16 @@ Usage
 This library is composed of a `Detector` object and different `Bots` implementation.
 
 ```php
-<?php
+use Bee4\UserAgent\Classifier\Detector;
 
-    use Bee4\UserAgent\Classifier\Detector;
+$ua = 'Mozilla/5.0 (compatible; Mail.RU/2.0)';
+$bot = Detector::whoIs($ua); //$bot is a Bots\MailRU instance
 
-    $ua = 'Mozilla/5.0 (compatible; Mail.RU/2.0)';
-    $bot = Detector::whoIs($ua); //$bot is a Bots\MailRU instance
+$bot->getBot(); //Here we get `mailru`
+$bot->getName(); //Here we get `mailru-bot`
 
-    $bot->getBot(); //Here we get `mailru`
-    $bot->getName(); //Here we get `mailru-bot`
+$ua = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
+$bot = Detector::whoIs($ua); //$bot is a Bots\Google instance
 
-    $ua = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
-    $bot = Detector::whoIs($ua); //$bot is a Bots\Google instance
-
-    $bot->getBot(); //Here we get `google`
-    $bot->getName(); //Here we get `google-bot`
+$bot->getBot(); //Here we get `google`
+$bot->getName(); //Here we get `google-bot`
