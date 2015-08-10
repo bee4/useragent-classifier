@@ -61,7 +61,7 @@ class AbstractBotTest extends \PHPUnit_Framework_TestCase
 		$method->invoke($this->object, 'fakebot-spider');
 
 		$this->assertEquals(
-			['bot'=>'fakebot', 'name'=>'fakebot-spider', 'tags' => null],
+			['bot'=>'fakebot', 'name'=>'fakebot-spider'],
 			$this->object->jsonSerialize()
 		);
 	}
