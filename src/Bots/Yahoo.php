@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a yahoo one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Yahoo extends AbstractBot
+class Yahoo extends AbstractTaggedBot
 {
     /**
      * Yahoo bot constructor

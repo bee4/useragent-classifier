@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a facebook one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Facebook extends AbstractBot
+class Facebook extends AbstractTaggedBot
 {
     /**
      * Facebook bot constructor

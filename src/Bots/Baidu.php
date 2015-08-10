@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a Baidu one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Baidu extends AbstractBot
+class Baidu extends AbstractTaggedBot
 {
     /**
      * Baidu bot constructor

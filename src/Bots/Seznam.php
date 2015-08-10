@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a Seznam one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Seznam extends AbstractBot
+class Seznam extends AbstractTaggedBot
 {
     /**
      * Seznam bot constructor

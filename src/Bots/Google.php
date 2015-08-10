@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a GoogleBot one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Google extends AbstractBot
+class Google extends AbstractTaggedBot
 {
     /**
      * Google bot constructor

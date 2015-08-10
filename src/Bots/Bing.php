@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a Bing one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Bing extends AbstractBot
+class Bing extends AbstractTaggedBot
 {
     /**
      * Bing bot constructor

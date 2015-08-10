@@ -18,7 +18,7 @@ use InvalidArgumentException;
  * Detect if a visit is a wordpress one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class WordPress extends AbstractBot
+class WordPress extends AbstractTaggedBot
 {
     /**
      * WordPress bot constructor

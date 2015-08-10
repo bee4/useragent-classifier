@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a Mail.ru one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class MailRU extends AbstractBot
+class MailRU extends AbstractTaggedBot
 {
     /**
      * MailRU bot constructor

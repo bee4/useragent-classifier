@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a yandex one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Yandex extends AbstractBot
+class Yandex extends AbstractTaggedBot
 {
     /**
      * Yandex bot constructor

@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is an Alexa one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Alexa extends AbstractBot
+class Alexa extends AbstractTaggedBot
 {
     /**
      * Alexa bot constructor

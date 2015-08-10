@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a Soso one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class Soso extends AbstractBot
+class Soso extends AbstractTaggedBot
 {
     /**
      * Soso bot constructor

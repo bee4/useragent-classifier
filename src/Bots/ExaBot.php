@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is an ExaBot one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class ExaBot extends AbstractBot
+class ExaBot extends AbstractTaggedBot
 {
     /**
      * ExaBot bot constructor

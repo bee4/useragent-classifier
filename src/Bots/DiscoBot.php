@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Detect if a visit is a DiscoBot one
  * @package Bee4\UserAgent\Classifier\Bots
  */
-class DiscoBot extends AbstractBot
+class DiscoBot extends AbstractTaggedBot
 {
     /**
      * DiscoBot bot constructor
