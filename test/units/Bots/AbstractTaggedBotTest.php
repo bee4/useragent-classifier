@@ -38,7 +38,6 @@ class AbstractTaggedBotTest extends \PHPUnit_Framework_TestCase
 
 		$tags = ['tag1', 'tag2', 'tag3'];
 		$this->object->addTags($tags);
-		var_dump($this->object->getTags());
 		$this->assertEquals($tags, $this->object->getTags());
 	}
 }

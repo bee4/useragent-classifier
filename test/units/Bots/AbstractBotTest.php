@@ -48,10 +48,10 @@ class AbstractBotTest extends \PHPUnit_Framework_TestCase
 	}
 
 	public function testGetBot() {
-/*		$this->assertEquals(
+		$this->assertEquals(
 			'fakebot',
-			$this->object->getBot()
-		);*/
+			call_user_func([$this->object, 'getBot'])
+		);
 	}
 
 	public function testJsonSerialize()
