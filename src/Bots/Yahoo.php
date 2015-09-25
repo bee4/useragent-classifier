@@ -26,7 +26,8 @@ class Yahoo extends AbstractTaggedBot
          * Mozilla/5.0 (compatible; Yahoo! Slurp/3.0; http://help.yahoo.com/help/us/ysearch/slurp)
          * Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)
          *
-         * Mozilla/5.0 (compatible; Yahoo Pipes 2.0; +http://developer.yahoo.com/yql/provider) Gecko/20090729 Firefox/3.5.2
+         * Mozilla/5.0 (compatible; Yahoo Pipes 2.0; +http://developer.yahoo.com/yql/provider)
+         *     Gecko/20090729 Firefox/3.5.2
          *
          * Mozilla/5.0 (YahooYSMcm/3.0.0; http://help.yahoo.com)
          *
@@ -55,13 +56,19 @@ class Yahoo extends AbstractTaggedBot
         } elseif (strpos($useragent, 'Yahoo Pipes') !== false) {
             $this->setName('yahoo-pipes');
             $this->addTags(['feed']);
-        } elseif (strpos($useragent, 'Y!J') !== false || $useragent == 'Mozilla/4.0 (compatible; Yahoo Japan; for robot study; kasugiya)') {
+        } elseif (
+            strpos($useragent, 'Y!J') !== false ||
+            $useragent == 'Mozilla/4.0 (compatible; Yahoo Japan; for robot study; kasugiya)'
+        ) {
             $this->setName('yahoo-japan');
             $this->addTags(['search']);
         } elseif ($useragent == 'YahooCacheSystem' || $useragent == 'YahooExternalCache') {
             $this->setName('yahoo-cache');
             $this->addTags(['search']);
-        } elseif (substr($useragent, 0, 14) == 'YahooMessenger' || substr($useragent, 0, 20) == 'YahooMobileMessenger') {
+        } elseif (
+            substr($useragent, 0, 14) == 'YahooMessenger' ||
+            substr($useragent, 0, 20) == 'YahooMobileMessenger'
+        ) {
             $this->setName('yahoo-messenger');
             $this->addTags(['browser']);
         } elseif ($useragent == 'Yahoo:LinkExpander:Slingstone') {

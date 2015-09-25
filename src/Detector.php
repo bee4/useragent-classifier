@@ -27,11 +27,19 @@ class Detector
                     return new Bots\BeeBot($useragent);
                 //--------------------------------------------------------------------------
                 //Google Bot
-                } elseif (strpos($lower, "google") !== false && !(strpos($lower, "google") != 0 && $lower[strpos($lower, "google")-1] == '@')) {
+                } elseif (
+                    strpos($lower, "google") !== false &&
+                    !(strpos($lower, "google") != 0 &&
+                    $lower[strpos($lower, "google")-1] == '@')
+                ) {
                     return new Bots\Google($useragent);
                 //--------------------------------------------------------------------------
                 //Yahoo but not a yahoo mail...
-                } elseif (strpos($lower, "yahoo") !== false && !(strpos($lower, "yahoo") != 0 && $lower[strpos($lower, "yahoo")-1] == '@')) {
+                } elseif (
+                    strpos($lower, "yahoo") !== false &&
+                    !(strpos($lower, "yahoo") != 0 &&
+                    $lower[strpos($lower, "yahoo")-1] == '@')
+                ) {
                     return new Bots\Yahoo($useragent);
                 //--------------------------------------------------------------------------
                 //Bing

@@ -17,7 +17,8 @@ class Facebook extends AbstractTaggedBot
      */
     public function __construct($useragent)
     {
-        //Facebook External Hit (Social media agent): http://www.botopedia.org/user-agent-list/social-media-agents/facebook-external-hit
+        //Facebook External Hit (Social media agent):
+        //  http://www.botopedia.org/user-agent-list/social-media-agents/facebook-external-hit
         /**
          * facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)
          * facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)

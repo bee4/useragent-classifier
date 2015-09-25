@@ -5,7 +5,8 @@ namespace Bee4\UserAgent\Classifier\Bots;
 use Bee4\UserAgent\Classifier\NotAKnownBotException;
 
 /**
- * The basic bot detector which can track unknown bots which came with a useragent specifically defined as a bot/spider/crawler
+ * The basic bot detector which can track unknown bots which came with a useragent specifically defined as a
+ * bot/spider/crawler
  * @package Bee4\UserAgent\Classifier\Bots
  */
 class BaseBot extends AbstractBot
@@ -18,9 +19,9 @@ class BaseBot extends AbstractBot
     public function __construct($useragent)
     {
         $lower = strtolower($useragent);
-        if( preg_match('/^crawler4j/', $useragent) === 1 ) {
+        if (preg_match('/^crawler4j/', $useragent) === 1) {
             $this->setName('crawler4j');
-        } elseif( preg_match('/^scrapy/', $useragent) === 1 ) {
+        } elseif (preg_match('/^scrapy/', $useragent) === 1) {
             $this->setName('scrapy');
         } elseif (strpos($lower, 'bot') !== false) {
             $this->setName('base-bot');

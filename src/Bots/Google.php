@@ -20,10 +20,12 @@ class Google extends AbstractTaggedBot
     {
         //GoogleBot (search bot): http://www.botopedia.org/user-agent-list/search-bots/googlebot.html
         //Google FeedFetcher (search bot): http://www.botopedia.org/user-agent-list/search-bots/google-feedfetcher.html
-        //Google Custom Search (search bot): http://www.botopedia.org/user-agent-list/search-bots/google-custom-search.html
+        //Google Custom Search (search bot):
+        //  http://www.botopedia.org/user-agent-list/search-bots/google-custom-search.html
         //Google Desktop (Crawler): http://www.botopedia.org/user-agent-list/crawlers/item/338.html
         //Google Plus Share (Service agent): http://www.botopedia.org/user-agent-list/service-agents/item/337.html
-        //Google Translate (service agent): http://www.botopedia.org/user-agent-list/service-agents/google-translate.html
+        //Google Translate (service agent):
+        //  http://www.botopedia.org/user-agent-list/service-agents/google-translate.html
         //Google News, Google Video, Mediapartners, Adsbot: https://support.google.com/webmasters/answer/1061943
         /**
          * compatible; Mediapartners-Google/2.1; +http://www.google.com/bot.html
@@ -40,8 +42,10 @@ class Google extends AbstractTaggedBot
          * Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
          * DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1; +htt://www.google.com/bot.html)
          * GoogleProducer
-         * SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)
-         * Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)
+         * SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+         *     (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)
+         * Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko)
+         *     Version/4.0.5 Mobile/8B117 Safari/6531.22.7 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)
          * Google-Site-Verification/1.0
          * Google-Test
          * Googlebot/2.1 (+http://www.google.com/bot.html)
@@ -54,17 +58,24 @@ class Google extends AbstractTaggedBot
          *
          * Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0
          *
-         * Mozilla/5.0 (iPad; CPU OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A405 Safari/7534.48.3,gzip(gfe) (via translate.google.com)
+         * Mozilla/5.0 (iPad; CPU OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1
+         *     Mobile/9A405 Safari/7534.48.3,gzip(gfe) (via translate.google.com)
          * Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0,gzip(gfe) (via translate.google.com)
-         * Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5,gzip(gfe) (via translate.google.com)
+         * Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5,gzip(gfe)
+         *      (via translate.google.com)
          * Mozilla/5.0 (Windows NT 5.1; rv:12.0) Gecko/20100101 Firefox/12.0,gzip(gfe) (via translate.google.com)
          * Mozilla/5.0 (Windows NT 6.1; rv:13.0) Gecko/20100101 Firefox/13.0.1,gzip(gfe) (via translate.google.com)
-         * Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3,gzip(gfe) (via translate.google.com)
-         * Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1,gzip(gfe) (via translate.google.com)
-         * Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5,gzip(gfe) (via translate.google.com)
-         * Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5,gzip(gfe) (via translate.google.com)
+         * Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1
+         *     Mobile/9B206 Safari/7534.48.3,gzip(gfe) (via translate.google.com)
+         * Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1,gzip(gfe)
+         *      (via translate.google.com)
+         * Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko)
+         *     Chrome/19.0.1084.56 Safari/536.5,gzip(gfe) (via translate.google.com)
+         * Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56
+         *     Safari/536.5,gzip(gfe) (via translate.google.com)
          * Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0),gzip(gfe) (via translate.google.com)
-         * Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5,gzip(gfe) (via translate.google.com)
+         * Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56
+         *     Safari/536.5,gzip(gfe) (via translate.google.com)
          * Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0),gzip(gfe) (via translate.google.com)
          * Mozilla/5.0 (Windows NT 5.1; rv:13.0) Gecko/20100101 Firefox/13.0.1,gzip(gfe) (via translate.google.com)
          *
