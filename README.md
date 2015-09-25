@@ -21,7 +21,7 @@ This project can be installed using Composer. Add the following to your composer
 ```JSON
 {
     "require": {
-        "bee4/useragent-classifier": "~0.0"
+        "bee4/useragent-classifier": "~1.0"
     }
 }
 ```
@@ -29,7 +29,7 @@ This project can be installed using Composer. Add the following to your composer
 or run this command:
 
 ```Shell
-composer require bee4/useragent-classifier:~0.0
+composer require bee4/useragent-classifier:~1.0
 ```
 
 Usage
