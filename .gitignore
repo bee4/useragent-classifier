@@ -1,15 +1,4 @@
-#System files
-.DS_Store
-*~
-
-#IDE project files
-*.esproj
-nbproject
-.idea
-*.sublime-project
-*.sublime-workspace
-
-#Projects files
-vendor
-report
-bin
+/vendor/
+/report/
+/bin/
+/composer.lock

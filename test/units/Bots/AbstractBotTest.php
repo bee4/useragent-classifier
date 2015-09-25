@@ -1,21 +1,12 @@
 <?php
-/**
- * This file is part of the beebot package.
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @copyright Bee4 2013
- * @author    Stephane HULARD <s.hulard@chstudio.fr>
- * @author    Ivo GEORGIEV <ivokgeorgiev@gmail.com>
- * @package   Test\Bee4\UserAgentClassify\Bots
- */
-namespace Test\Bee4\UserAgentClassify\Bots;
 
-use Bee4\UserAgentClassify\Bots\AbstractBot;
+namespace Test\Bee4\UserAgent\Classifier\Bots;
+
+use Bee4\UserAgent\Classifier\Bots\AbstractBot;
 
 /**
  * Class AbstractBotTest
- * @package Test\Bee4\UserAgentClassify\Bots
+ * @package Test\Bee4\UserAgent\Classifier\Bots
  */
 class AbstractBotTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,7 +22,7 @@ class AbstractBotTest extends \PHPUnit_Framework_TestCase
 	protected function setUp()
 	{
 		$this->object = $this
-			->getMockBuilder('\Bee4\UserAgentClassify\Bots\AbstractBot')
+			->getMockBuilder('\Bee4\UserAgent\Classifier\Bots\AbstractBot')
 			->setMethods(null)
 	    ->setMockClassName('FakeBot')
 	    ->getMock();
@@ -57,10 +48,10 @@ class AbstractBotTest extends \PHPUnit_Framework_TestCase
 	}
 
 	public function testGetBot() {
-/*		$this->assertEquals(
+		$this->assertEquals(
 			'fakebot',
-			$this->object->getBot()
-		);*/
+			call_user_func([$this->object, 'getBot'])
+		);
 	}
 
 	public function testJsonSerialize()
@@ -70,7 +61,7 @@ class AbstractBotTest extends \PHPUnit_Framework_TestCase
 		$method->invoke($this->object, 'fakebot-spider');
 
 		$this->assertEquals(
-			['bot'=>'fakebot', 'name'=>'fakebot-spider', 'tags' => null],
+			['bot'=>'fakebot', 'name'=>'fakebot-spider'],
 			$this->object->jsonSerialize()
 		);
 	}
