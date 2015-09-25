@@ -21,7 +21,7 @@ class BeeBot extends AbstractBot
         /**
          * Bee4 - BeeBot/1.0
          */
-        if (substr($useragent, 0, 7) == 'Bee4 - ') {
+        if (substr($useragent, 0, 7) == 'Bee4 - ' || substr($useragent, 0, 7) == 'BeeBOT - ' ) {
             $this->setName('beebot-crawler');
         } else {
             throw new InvalidArgumentException('UserAgent given is not a valid BeeBot one: ' . $useragent);
